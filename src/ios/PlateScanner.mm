@@ -23,8 +23,9 @@
                                   [[[NSBundle mainBundle] pathForResource:@"openalpr.conf" ofType:nil] UTF8String],
                                   [[[NSBundle mainBundle] pathForResource:@"runtime_data" ofType:nil] UTF8String]
                                   );
-        delegate->setTopN(3);
-        delegate->setCountry("de");
+        delegate->setTopN(6);
+        delegate->setCountry("eu");
+        delegate->setDefaultRegion("de");
         
         if (delegate->isLoaded() == false) {
             NSLog(@"Error initializing OpenALPR library");
